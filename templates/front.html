@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="UTF-8">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>프로젝트 사이트</title>
+    <link rel="icon" href="{{ url_for('static', filename='image/ANU.jpg') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='js/login.js') }}"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+        <div class ="inner">
+            <img class="logo" src="https://image-cdn.hypb.st/https%3A%2F%2Fkr.hypebeast.com%2Ffiles%2F2021%2F01%2Fkia-motors-new-logo-brand-slogan-officially-revealed-ft.jpg?w=960&cbr=1&q=90&fit=max">
+
+            <div class="auth-section">
+                <span class="name" id="user-name" style="display: none;"></span>
+                <button class='click-btn' id="login-btn" onclick="location.href='/login'">로그인</button>
+                <button class='click-btn' id="logout-btn" onclick="handleLogout()" style="display: none;">
+                    로그아웃
+                    <i class="fa-solid fa-arrow-right-from-bracket" style="color: white;"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="top-container">
+        <img src="https://worldwide.kia.com/kr/image/og/the-new-kia-og-image.jpg">
+        <div class="overlay-container">
+            <span>제조기업기반</span>
+            <span><font style="color: pink;">파이프 불량</font> 검사</span>
+            <div>
+                <span class="menu" style="color: pink;">팀원 :</span>
+                <span class="menu">오찬해</span>
+                <span class="menu">권희준</span>
+                <span class="menu">김경현</span>
+                <span class="menu">송휘선</span>
+                <span class="menu">최규호</span>
+            </div>
+            <span> <font style="color: pink;">팀명 :</font> 5 Gears</span>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="inner">
+            <div class="row">
+                <div class="col-4 card-room">
+                    <nav class="my-card"> <!--nav는 네비게이션 태그-->
+                        <img src="https://m.baegwan.net/data/img/500/714.jpg">
+                        <span class="title">파이프 불량 검사</span>
+                        <span class="sub-title">AI 모델 검사</span>
+                        <p>AI 기술로 실시간 파이프 품질을 분석하여 생산 효율성과 신뢰성을 높이는 검사 시스템입니다.</p>
+
+                        <button class="page-btn" onclick="checkLoginAndRedirect('/pipe')">
+                            <i class="fa-regular fa-circle-check"></i>
+                            실시간 검사하기
+                        </button>
+                    </nav>
+                </div>
+
+                <div class="col-4 card-room">
+                    <nav class="my-card">
+                        <img src="https://cdn.pixabay.com/photo/2018/02/21/17/36/line-graph-3170988_640.png">
+                        <span class="title">연간 파이프 불량 차트</span>
+                        <span class="sub-title">Superset Chart</span>
+                        <p>파이프 생산 데이터를 직관적인 차트로 시각화하여 제공하는 대시보드입니다.</p>
+
+                        <button class="page-btn" onclick="checkLoginAndRedirect('http://5gears.iptime.org:8088/superset/dashboard/21/?native_filters_key=qAwuHKf_NQq-7RKUVBeE3LOy7MQueNSXqWDUshWRt7Vs0NYqLq8Ta-tQzxjYch-T')">
+                            <i class="fa-solid fa-chart-simple"></i>
+                            데이터 확인하기
+                        </button>
+                    </nav>
+                </div>
+
+                <div class="col-4 card-room">
+                    <nav class="my-card">
+                        <img src="https://cdn.pixabay.com/photo/2019/10/21/12/01/newspapers-4565916_1280.jpg">
+                        <span class="title">최신 뉴스</span>
+                        <span class="sub-title">크롤링</span>
+                        <p>산업 동향과 최신 뉴스를 실시간으로 수집하여 한눈에 볼 수 있는 뉴스 서비스입니다.</p>
+
+                        <button class="page-btn" onclick="checkLoginAndRedirect('/news')">
+                            <i class="fa-solid fa-newspaper"></i>
+                            뉴스 확인하기
+                        </button>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <footer class="section" style="background-color: gray;"></footer> -->
+</body>
+</html>

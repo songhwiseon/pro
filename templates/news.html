@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="UTF-8">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>뉴스 사이트</title>
+    <link rel="icon" href="{{ url_for('static', filename='image/logo-icon.png') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/news.css') }}">
+    <script src="{{ url_for('static', filename='js/chart.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/news.js') }}"></script>
+
+</head>
+
+<body>
+    <header>
+        <h2>📰 최근 동향 뉴스</h2>
+        <nav>
+            <a class="menu" onclick="location.href='/'">홈</a>
+            <a class="menu" 
+                onclick="location.href='http://5gears.iptime.org:8088/superset/dashboard/22/?native_filters_key=S_-5eQ-mCNK3-cx1LQBfuwfV1UrIN-gNaQSBq392Ez60n3BHuxoI0law7u3Pfu-1'">
+                주식 시장</a>
+            <a class="menu" 
+                onclick="location.href='http://5gears.iptime.org:8088/superset/dashboard/24/?native_filters_key=YwAddTpv2aZKFmmj4MSMwC-nZaZFNqFGjI1-v3RzI5ehkKgm1ZHltsJYPLHVXKrd'">
+                예측 전망</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <!-- 좌측 섹션 -->
+        <section class="left">
+            <!-- 상단 칸 -->
+            <div class="section-box">
+                <section class="news-section">
+                    <span>정치 뉴스</span>
+                    <ul id="politics-news"></ul>
+                </section>
+            </div>
+
+            <!-- 하단 칸 -->
+            <div class="section-box">
+                <section class="news-section">
+                    <span>경제 뉴스</span>
+                    <ul id="economy-news"></ul>
+                </section>
+            </div>
+        </section>
+
+        <!-- 중앙 섹션 -->
+        <section class="center">
+            <!-- 상단 칸 (방송) -->
+            <div class="broadcast-box">
+                <h3>방송 뉴스</h3>
+                <section class="broadcast-section">
+                    <div class="broadcast">
+                        <div class="live-box" onclick="window.open('https://media.naver.com/press/056/live', '_blank')">KBS 뉴스</div>
+                        <div class="live-box" onclick="window.open('https://media.naver.com/press/055/live', '_blank')">SBS 뉴스</div>
+                        <div class="live-box" onclick="window.open('https://media.naver.com/press/052/live', '_blank')">YTN</div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- 중간 칸 (철강) -->
+            <div class="section-box">
+                <section class="news-section">
+                    <span>철강 뉴스</span>
+                    
+
+                    <ul id="steel-news"></ul>
+                </section>
+            </div>
+
+            <!-- 하단 칸 (반도체) -->
+            <div class="section-box">
+                <section class="news-section">
+                    <span>반도체 뉴스</span>
+                    <ul id="semi-news"></ul>
+                </section>
+            </div>
+        </section>
+
+        <!-- 우측 섹션 -->
+        <section class="right">
+            <h3>가격 보기</h3>
+            
+            <div class="chart-container">
+                <div class="chart-title">
+                    <span>차량 가격</span>
+                    <button class="icon-button" onclick="window.open('https://tradingeconomics.com/united-states/used-car-prices-mom', '_blank')">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                </div>
+                <canvas id="priceChart"></canvas>
+            </div>
+
+            <div class="chart-container">
+                <div class="chart-title">
+                    <span>석탄(coal) 가격</span>
+                    <button class="icon-button" onclick="window.open('https://tradingeconomics.com/commodity/coal', '_blank')">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                </div>  
+                <canvas id="coalChart"></canvas>
+            </div>
+
+            <div class="chart-container">
+                <div class="chart-title">
+                    <span>철광석(iron) 가격</span>
+                    <button class="icon-button" onclick="window.open('https://tradingeconomics.com/commodity/iron-ore', '_blank')">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                </div>  
+                <canvas id="ironChart"></canvas>
+            </div>
+
+            <div class="chart-container">
+                <div class="chart-title">
+                    <span>알루미늄(aluminum) 가격</span>
+                    <button class="icon-button" onclick="window.open('https://tradingeconomics.com/commodity/aluminum', '_blank')">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                </div>  
+                <canvas id="aluminumChart"></canvas>
+            </div>
+
+            <div class="section-box">
+                <section class="news-section">
+                    <span>자동차 뉴스</span>
+                    <ul id="car-news"></ul>
+                </section>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,245 @@
+body{
+	font-family:'basic';
+}
+
+
+:root{ /* 변수 선언 */
+    --color-main : gray;
+    --w-page : 1050px;
+}
+
+
+body{
+    background-color : white;
+    font-size: 30px;
+    padding : 0px;
+    margin : 0px;
+    font-family: 'basic';
+}   
+
+
+header{
+    width: 100%;
+    height: 70px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+
+header > .inner{ 
+    width: var(--w-page);
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+}
+
+
+header img.logo{
+    height: 100%;
+    margin-right: 0px;
+}
+
+
+header .menu{
+    margin-left: 20px;
+    font-weight: 700;
+    color: black;
+    font-size: 18px;
+}
+
+
+
+.top-container{
+    width: 100%;
+    height: 450px;
+    background-color: red; 
+    position: relative; /* 상대적 위치 */
+}
+
+
+.top-container > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 이미지 비율 유지 */   
+}
+
+
+.top-container > .overlay-container{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute; /* 절대적 위치 */
+    top: 0;
+    left: 0;
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+
+}
+
+
+
+.section{
+    width: 100%;
+    padding: 50px;
+
+}
+
+
+.section > .inner{
+    width: var(--w-page);
+    
+    margin: 0 auto;
+}
+
+
+.card-room{
+    
+    background-color: white;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+
+.my-card{
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.my-card > img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+
+
+
+.my-card > .title{
+    font-size: 25px;
+    font-weight: bold;
+    color: skyblue;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.my-card > .sub-title{
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    color: black;
+}
+
+
+.my-card > p{
+    margin-top: 5px;
+    font-size: 15px;
+    font-weight: 500;
+    color: black;
+}
+
+
+.my-card > button{
+    width: 100%;
+    background-color: blue;
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    padding: 8px;
+}
+
+
+.my-card > button > i{
+    margin-right: 5px;
+}
+
+
+.my-card > button:hover{
+    background-color: skyblue;
+}
+
+
+
+.info-card{
+    display: flex;
+    flex-direction: column;
+    color: black;
+    margin-right: 100px;
+}
+
+
+.info-card > .info-title{
+    font-size: 20px;
+    font-weight: 700;
+    color: black;
+    margin-bottom: 10px;
+}
+
+
+.info-card > span{
+    font-size: 15px;
+    font-weight: 500;
+    color: purple;
+}
+
+
+
+.form-control{
+    width: 100%;
+    padding: 6px;
+    outline: none;
+    border: 1px solid #dedede;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+
+
+.click-btn{
+    width: 100px;
+    cursor: pointer;
+    background-color: #09052b;
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 5px;
+    border: none;
+    padding: 8px;
+}
+
+
+.click-btn:hover{
+    background-color: blue;
+}
+
+
+
+.name{
+    font-size: 25px;
+    font-weight: 500;
+    color: black;
+    margin-right: 10px; 
+}
+

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>파이프 불량품 확인</title>
+	<link rel="icon" href="{{ url_for('static', filename='image/ANU.jpg') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/pipe.css') }}">
+    <script src="{{ url_for('static', filename='js/pipe.js') }}"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.10/dist/sweetalert2.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.10/dist/sweetalert2.min.js"></script>
+
+</head>
+<body>
+	<header>
+		<div class="inner">
+			<div class="logo-container">
+				<img class="logo" src="{{ url_for('static', filename='image/ANU.jpg') }}" onclick="location.href='/'">
+				<span>파이프 실시간 검사</span>
+			</div>
+			<div class="icons">
+				<i class="fa-solid fa-house" onclick="location.href='/'"></i>
+				<i class="fa-solid fa-database" onclick="location.href='http://5gears.iptime.org:8088/superset/dashboard/21/?native_filters_key=8LuJSVY5-4-_Iy3Su0X8A_vQmkf82KPIArhKjpDRTb7-xGu760a3eBK0Yw03gQGU'"></i>
+				<i class="fa-solid fa-newspaper" onclick="location.href='/news'"></i>
+			</div>
+		</div>
+	</header>
+
+	<div class="img-container">
+		<img class="pipe-img" src="{{ url_for('static', filename='image/conve.png') }}">
+		
+		<div class="content-wrapper">
+			<div class="conveyor-container">
+				<div class="belt">
+					<div class="detection-zone">
+						<div class="scanner-animation"></div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="log-container">
+				<span>검사 로그</span>
+				<ul id="log-list" class="log-list"></ul>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
